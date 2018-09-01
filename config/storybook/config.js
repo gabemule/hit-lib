@@ -1,5 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { configure } from "@storybook/vue";
+import { setOptions } from "@storybook/addon-options";
+
+setOptions({
+  addonPanelInRight: true
+});
 
 const req = require.context("../../src/stories", true, /.stories.js$/);
 

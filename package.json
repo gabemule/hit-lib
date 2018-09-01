@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
@@ -12,11 +12,14 @@
     "build:storybook": "vue-cli-service build:storybook -c config/storybook"
   },
   "dependencies": {
+    "moment": "^2.22.2",
     "vue": "^2.5.17"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.20",
+    "@storybook/addon-knobs": "^4.0.0-alpha.20",
     "@storybook/addon-links": "^4.0.0-alpha.20",
+    "@storybook/addon-options": "^4.0.0-alpha.20",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-e2e-nightwatch": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
