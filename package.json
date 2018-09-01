@@ -7,12 +7,16 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "storybook": "vue-cli-service serve:storybook -p 6006 -c config/storybook",
+    "build:storybook": "vue-cli-service build:storybook -c config/storybook"
   },
   "dependencies": {
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.20",
+    "@storybook/addon-links": "^4.0.0-alpha.20",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-e2e-nightwatch": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
@@ -25,6 +29,7 @@
     "lint-staged": "^7.2.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "vue-cli-plugin-storybook": "^0.4.6",
     "vue-template-compiler": "^2.5.17"
   },
   "gitHooks": {
