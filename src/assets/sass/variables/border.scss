@@ -1,0 +1,18 @@
+//borders-base
+$border: 1px;
+$border-md: 2px;
+$border-lg: 4px;
+
+//border inside
+$border-inside: inset 0 0 0 1px;
+$border-md-inside: inset 0 0 0 2px;
+$border-inside-left: inset 1px 0 0;
+$border-inside-right: inset -1px 0 0;
+$border-inside-top: inset 0 1px 0 0;
+$border-inside-bottom: inset 0 -1px 0 0;
+
+//border-radius
+$radius-sm: 4px;
+$radius-md: 12px;
+$radius-lg: 18px;
+$radius-xl: 24px;

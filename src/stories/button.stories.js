@@ -25,6 +25,8 @@ const optionsSize = {
 
 storiesOf("Hit Button", module)
   .addDecorator(withKnobs)
+  .addDecorator(withOptions)
+  .addParameters({ options: { showAddonPanel: true, selectedAddonPanel: 'storybooks/storybook-addon-knobs' } })
   .add(
     "Customizable Button",
     withInfo({})(() => ({
@@ -48,8 +50,7 @@ storiesOf("Hit Button", module)
     }))
   )
 
-  .addDecorator(withOptions)
-  .addParameters({ options: { selectedAddonPanel: 'storybook/actions/actions-panel' } })
+  .addParameters({ options: { showAddonPanel: true, selectedAddonPanel: 'storybook/actions/actions-panel' } })
   .add("Button Sizes", () => ({
     components: { ...Components },
     template: `
@@ -70,8 +71,7 @@ storiesOf("Hit Button", module)
     methods: { action: action("Clicked") }
   }))
 
-  .addDecorator(withOptions)
-  .addParameters({ options: { selectedAddonPanel: 'storybook/actions/actions-panel' } })
+  .addParameters({ options: { showAddonPanel: true, selectedAddonPanel: 'storybook/actions/actions-panel' } })
   .add("Button Variants", () => ({
       components: { ...Components },
       template: `

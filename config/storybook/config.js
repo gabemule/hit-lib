@@ -2,8 +2,14 @@
 import { configure } from "@storybook/vue";
 import { setOptions } from "@storybook/addon-options";
 
+import Vue from 'vue';
+import hitLib from './../../src/bundle';
+Vue.use(hitLib);
+
 setOptions({
-  addonPanelInRight: true
+  showAddonPanel: true,
+  addonPanelInRight: true,
+  selectedAddonPanel: 'storybooks/storybook-addon-knobs'
 });
 
 const req = require.context("../../src/stories", true, /.stories.js$/);

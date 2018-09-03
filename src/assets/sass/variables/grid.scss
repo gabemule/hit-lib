@@ -1,0 +1,37 @@
+@import "./border.scss";
+@import "./breakpoints.scss";
+@import "./color.scss";
+@import "./spacing.scss";
+@import "./../mixins/media.scss";
+
+$grid-columns: 12;
+$grid-border-color: $gray-3;
+$grid-gutter: $spacing-md-2;
+$half-gutter: $spacing-md-1;
+$half-gutter-sm: $spacing-sm;
+$grid-border: $border-inside $grid-border-color;
+$grid-border-left: $border-inside-left $grid-border-color;
+$grid-border-right: $border-inside-right $grid-border-color;
+$grid-border-top: $border-inside-top $grid-border-color;
+$grid-border-bottom: $border-inside-bottom $grid-border-color;
+$grid-container-maxWidth: $screen-lg;
+
+$grid-marginBottomSmall: $spacing-md-2;
+$grid-marginBottomSmall-md: $spacing-md-2;
+
+$grid-marginBottom: $spacing-lg-2;
+$grid-marginBottom-md: $spacing-lg-2;
+
+$grid-marginBottomLarge: $spacing-lg-3;
+$grid-marginBottomLarge-md: $spacing-lg-3;
+
+$grid-marginTopSmall: $spacing-md-2;
+$grid-marginTopSmall-md: $spacing-md-2;
+
+$grid-marginTop: $spacing-lg-2;
+$grid-marginTop-md: $spacing-lg-2;
+
+$grid-marginTopLarge: $spacing-lg-3;
+$grid-marginTopLarge-md: $spacing-lg-3;
+$grid-verticalGap-col: 0 $spacing-lg-2;
+$grid-verticalGap-col-md: 0 $spacing-lg-2;

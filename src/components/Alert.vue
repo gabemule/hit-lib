@@ -10,7 +10,7 @@
 
             <span> {{ alert.message }} </span>
 
-            <button @click="$alert.remove(alert.id)"> Close</button>
+            <button @click="$Alert.remove(alert.id)"> Close</button>
         </div>
     </div>
 </template>
