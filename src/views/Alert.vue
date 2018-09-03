@@ -18,6 +18,8 @@
                     <hit-button @click="success"> Success Message </hit-button>
                     <hit-button variant="secondary" @click="warning"> Warning Message </hit-button>
                     <hit-button variant="primary-inverse" @click="error"> Error Message </hit-button>
+
+                    <hit-button variant="back" @click="theme"> Change Theme </hit-button>
                 </hit-col>
             </hit-row>
 
@@ -68,6 +70,21 @@ export default {
     },
     error() {
       this.$Alert.error("Error Message Example Triggered!");
+    },
+
+    themeCUSTOM() {
+      let theme = {
+        styles: {
+          primary: '#FF4E63',
+          secondary: '#ffc107',
+          error: '#dc3545',
+          warning: '#ffc107',
+          success: '#28a745',
+          info: '#17a2b8'
+        }
+      };
+
+      this.$Theme.updateStyles(theme);
     }
   }
 };

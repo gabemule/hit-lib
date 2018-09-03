@@ -35,9 +35,9 @@ export default {
         }
       },
       methods: {
-        checkStyles() {
-          if (options.styles !== null) {
-            Object.entries(options.styles).forEach((name) => {
+        updateStyles(opt) {
+          if (opt.styles !== null) {
+            Object.entries(opt.styles).forEach((name) => {
               this.updateStyle(name[0], name[1]);
             });
           }
@@ -47,7 +47,7 @@ export default {
         }
       },
       created() {
-        this.checkStyles();
+        this.updateStyles(options);
       }
     });
   }

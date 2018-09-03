@@ -1,31 +1,138 @@
-# hit-lib
+# HIT Lib
 
-## Project setup
+## Install
 ```
-yarn install
-```
+npm install --save-dev hit-lib
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+or
 
-### Compiles and minifies for production
-```
-yarn run build
+yarn add -D hit-lib
 ```
 
-### Lints and fixes files
+### Usage in Vue Project
 ```
-yarn run lint
+In main.js:
+
+import hitLib from 'hit-lib';
+Vue.use(hitLib);
 ```
 
-### Run your unit tests
+## Components
+
+### Storybook
 ```
-yarn run test:unit
+$ yarn storybook
+
+=> Open Storybook with Component Examples and Usages
 ```
 
-### Run your end-to-end tests
+
+## Plugins
+
+### Alert
 ```
-yarn run test:e2e
+In App.vue:
+
+<hit-alert></hit-alert>
+```
+
+#### Alert Trigger
+```
+Global Trigger Functions:
+
+this.$Alert.success('Message');
+this.$Alert.info('Message');
+this.$Alert.warning('Message');
+this.$Alert.error('Message');
+```
+
+#### Alert Params
+```
+Speed in ms:
+
+let speed = 20000;
+this.$Alert.success('Message', speed);
+this.$Alert.warning('Message', speed);
+this.$Alert.error('Message', speed);
+```
+
+### Theme
+```
+In main.js:
+
+## Styles
+
+    Vue.use(hitLib, {
+      styles: {
+        primary: '#4286f4',
+        primaryLighten: '',
+        primaryDarken: '',
+
+        secondary: '#ed40d8',
+        secondaryLighten: '',
+        secondaryDarken: '',
+
+        lighten: 0.15,
+        darken: -0.15,
+
+        white: '#FFF',
+        disabled: '#999999',
+
+        black: '#313647',
+        gray1: '#F2F2F2',
+        gray2: '#DDDDDD',
+        gray3: '#999999',
+        gray4: '#666666',
+
+        gridBorder: '#999999',
+
+        error: '#dc3545',
+        warning: '#ffc107',
+        success: '#28a745',
+        info: '#17a2b8',
+      }
+    });
+```
+
+#### Programatically Theming
+```
+let theme = {
+    styles: {
+        primary: '#4286f4',
+        primaryLighten: '',
+        primaryDarken: '',
+        
+        secondary: '#ed40d8',
+        secondaryLighten: '',
+        secondaryDarken: '',
+        
+        lighten: 0.15,
+        darken: -0.15,
+        
+        white: '#FFF',
+        disabled: '#999999',
+        
+        black: '#313647',
+        gray1: '#F2F2F2',
+        gray2: '#DDDDDD',
+        gray3: '#999999',
+        gray4: '#666666',
+        
+        gridBorder: '#999999',
+        
+        error: '#dc3545',
+        warning: '#ffc107',
+        success: '#28a745',
+        info: '#17a2b8',
+    } 
+};
+
+this.$Theme.updateStyle(theme);
+
+
+
+* If darken or primaryLighten/primaryDarken and 
+secondaryLighten/secondaryDarken colors are not 
+specified as in example above, It will use the 
+lighten/darken percentage. 
 ```
