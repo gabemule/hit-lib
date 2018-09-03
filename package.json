@@ -2,10 +2,11 @@
   "name": "hit-lib",
   "version": "0.1.0",
   "private": true,
+  "author": "Gabriel Mule <gabemule@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name hit ./src/bundle.js",
+    "build": "vue-cli-service build --target lib --name hit ./src/bundle.js",
+    "build:app": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
@@ -13,6 +14,21 @@
     "build:storybook": "vue-cli-service build:storybook -c config/storybook"
   },
   "main": "dist/hit.common.js",
+  "files": [
+    "config/*",
+    "dist/*",
+    "public/*",
+    "src/assets/*",
+    "src/components/*",
+    "src/plugins/*",
+    "src/stories/*",
+    "src/views/*",
+    "src/theme/*",
+    "src/*.vue",
+    "src/*.js",
+    "*.json",
+    "*.js"
+  ],
   "dependencies": {
     "moment": "^2.22.2",
     "vue": "^2.5.17"
