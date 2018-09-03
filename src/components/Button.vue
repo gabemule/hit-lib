@@ -1,5 +1,11 @@
 <template>
   <button
+    @mousedown="updateActiveState(true)"
+    @mouseup="updateActiveState(false)"
+
+    @mouseenter="updateHoverState(true)"
+    @mouseleave="updateHoverState(false)"
+
     @click="$emit('click')"
     class="hit-button"
     :class="[
@@ -8,6 +14,7 @@
       disabled && '-disabled'
     ]"
     :disabled="disabled"
+    :style="styles"
   >
     <slot/>
   </button>
@@ -37,6 +44,77 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    }
+  },
+  data() {
+    return {
+      hoverState: false,
+      activeState:false
+    }
+  },
+  methods: {
+    updateHoverState(bool) {
+      this.hoverState = bool;
+    },
+    updateActiveState(bool) {
+      this.activeState = bool;
+    }
+  },
+  computed: {
+    styles() {
+      let style = { styled: true };
+
+      if (this.variant === 'primary') {
+        if (this.activeState === true) {
+          style.backgroundColor = this.$Theme.styles.primaryActive;
+        } else if (this.hoverState === true) {
+          style.backgroundColor = this.$Theme.styles.primaryHover;
+        } else {
+          style.backgroundColor = this.$Theme.styles.primary;
+        }
+        style.color = this.$Theme.styles.white;
+      }
+
+      if (this.variant === 'secondary') {
+        if (this.activeState === true) {
+          style.backgroundColor = this.$Theme.styles.secondaryActive;
+        } else if (this.hoverState === true) {
+          style.backgroundColor = this.$Theme.styles.secondaryHover;
+        } else {
+          style.backgroundColor = this.$Theme.styles.secondary;
+        }
+        style.color = this.$Theme.styles.white;
+      }
+
+      if (this.variant === 'primary-inverse') {
+        if (this.activeState === true) {
+          style.backgroundColor = this.$Theme.styles.primaryActive;
+          style.color = this.$Theme.styles.white;
+        } else if (this.hoverState === true) {
+          style.backgroundColor = this.$Theme.styles.primary;
+          style.color = this.$Theme.styles.white;
+        } else {
+          style.color = this.$Theme.styles.primary;
+        }
+      }
+
+      if (this.variant === 'secondary-inverse') {
+        if (this.activeState === true) {
+          style.backgroundColor = this.$Theme.styles.secondaryActive;
+          style.color = this.$Theme.styles.white;
+        } else if (this.hoverState === true) {
+          style.backgroundColor = this.$Theme.styles.secondary;
+          style.color = this.$Theme.styles.white;
+        } else {
+          style.color = this.$Theme.styles.secondary;
+        }
+      }
+
+      if (this.disabled === 'true') {
+        style.backgroundColor = this.$Theme.styles.disabled;
+      }
+
+      return style;
     }
   }
 };

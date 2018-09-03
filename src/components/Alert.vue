@@ -5,6 +5,7 @@
             :key="$index"
             class="hit-alert"
             :class="[ '-'+alert.status ]"
+            :style="styles(alert)"
         >
             <progress :value="alert.progress" max="100"></progress>
 
@@ -14,6 +15,34 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    styles(alert) {
+      let styles = { styled: true };
+
+      if (alert.status === 'success') {
+        styles.backgroundColor = this.$Theme.styles.success;
+      }
+
+      if (alert.status === 'warning') {
+        styles.backgroundColor = this.$Theme.styles.warning;
+      }
+
+      if (alert.status === 'info') {
+        styles.backgroundColor = this.$Theme.styles.info;
+      }
+
+      if (alert.status === 'error') {
+        styles.backgroundColor = this.$Theme.styles.error;
+      }
+
+      return styles;
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 .hit-alert-wrapper {
@@ -28,18 +57,6 @@
 
     progress {
       width: 100%;
-    }
-
-    &.-success {
-      background-color: blue;
-    }
-
-    &.-warning {
-      background-color: orange;
-    }
-
-    &.-error {
-      background-color: magenta;
     }
   }
 }

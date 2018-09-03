@@ -51,51 +51,88 @@ storiesOf("Hit Button", module)
   )
 
   .addParameters({ options: { showAddonPanel: true, selectedAddonPanel: 'storybook/actions/actions-panel' } })
-  .add("Button Sizes", () => ({
+  .add("Button Gallery", () => ({
     components: { ...Components },
     template: `
       <div>
-        <hit-button @click="action('Small Button')" size="sm">
+      
+        Primary: <br>
+        
+        <hit-button @click="action('Small Button Primary')" size="sm">
           Small Button
         </hit-button>
         
-        <hit-button @click="action('Medium Button')" size="md">
+        <hit-button @click="action('Medium Button Primary')" size="md">
           Medium Button
         </hit-button>
         
-        <hit-button @click="action('Large Button')" size="lg">
+        <hit-button @click="action('Large Button Primary')" size="lg">
           Large Button
         </hit-button>
+        
+        <br><br>
+        
+        Primary Inverse: <br>
+        
+        <hit-button @click="action('Small Button Primary Inverse')" size="sm" variant="primary-inverse">
+          Small Button
+        </hit-button>
+        
+        <hit-button @click="action('Medium Button Primary Inverse')" size="md" variant="primary-inverse">
+          Medium Button
+        </hit-button>
+        
+        <hit-button @click="action('Large Button Primary Inverse')" size="lg" variant="primary-inverse">
+          Large Button
+        </hit-button>
+        
+        <br><br>
+        
+        Secondary: <br>
+        
+        <hit-button @click="action('Small Button Secondary')" size="sm" variant="secondary">
+          Small Button
+        </hit-button>
+        
+        <hit-button @click="action('Medium Button Secondary')" size="md" variant="secondary">
+          Medium Button
+        </hit-button>
+        
+        <hit-button @click="action('Large Button Secondary')" size="lg" variant="secondary">
+          Large Button
+        </hit-button>
+        
+        <br><br>
+        
+        Secondary Inverse: <br>
+        
+        <hit-button @click="action('Small Button Secondary Inverse')" size="sm" variant="secondary-inverse">
+          Small Button
+        </hit-button>
+        
+        <hit-button @click="action('Medium Button Secondary Inverse')" size="md" variant="secondary-inverse">
+          Medium Button
+        </hit-button>
+        
+        <hit-button @click="action('Large Button Secondary Inverse')" size="lg" variant="secondary-inverse">
+          Large Button
+        </hit-button>
+        
+        <br><br><br><br>
+        
+        Small Back Button: <br>
+        <hit-button @click="action('Small Back Button')" size="sm" variant="back"></hit-button>
+        
+        <br><br>
+        
+        Medium Back Button: <br>
+        <hit-button @click="action('Medium Back Button')" size="md" variant="back"></hit-button>
+        
+        <br><br>
+        
+        Large Back Button: <br>
+        <hit-button @click="action('Large Back Button')" size="lg" variant="back"></hit-button>
       </div>
     `,
     methods: { action: action("Clicked") }
-  }))
-
-  .addParameters({ options: { showAddonPanel: true, selectedAddonPanel: 'storybook/actions/actions-panel' } })
-  .add("Button Variants", () => ({
-      components: { ...Components },
-      template: `
-        <div>
-          <hit-button @click="action" variant="primary">
-            Primary Button
-          </hit-button>
-          
-          <hit-button @click="action" variant="primary-inverse">
-            Primary Inverse Button
-          </hit-button>
-          
-          <hit-button @click="action" variant="secondary">
-            Secondary Button
-          </hit-button>
-          
-          <hit-button @click="action" variant="secondary-inverse">
-            Secondary Inverse Button
-          </hit-button>
-          
-          <hit-button @click="action" variant="back">
-            Back Button
-          </hit-button>
-        </div>
-      `,
-      methods: { action: action("Clicked") }
   }));
