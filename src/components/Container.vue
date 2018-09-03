@@ -23,6 +23,9 @@
 <style lang="scss">
     @import './../assets/sass/variables/grid.scss';
 
+    $gray-1: #F2F2F2;
+    $gray-2: #DDDDDD;
+
     .hit-container {
         padding-right: $half-gutter;
         padding-left: $half-gutter;
@@ -308,28 +311,7 @@
             order:1;
         }
 
-        //Border
-        &.-bottom-border, .-bottom-border.col{
-            box-shadow: $grid-border-bottom;
-        }
-
-        &.-top-border,.-top-border.col{
-            box-shadow: $grid-border-top;
-        }
-
-        &.-right-border, .-right-border.col{
-            box-shadow: $grid-border-right;
-        }
-
-        &.-left-border, .-left-border.col{
-            box-shadow: $grid-border-left;
-        }
-        &.-full-border, .-full-border.col{
-            box-shadow: $grid-border;
-        }
-
         //isHidden
-
         @media ( max-width :$screen-xxs ) {
             .col.-hidden-xxs {
                 display: none;

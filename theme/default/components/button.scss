@@ -1,0 +1,66 @@
+@import "./../config.scss";
+
+.hit-button {
+  //btn-primary
+  &.-primary{
+    background: $primary;
+    color: $white;
+
+    &:hover{
+      background: $primary-hover;
+    }
+    &:active{
+      background: $primary-active;
+    }
+    &:disabled, &.disabled{
+      background: $disabled;
+    }
+  }
+  &.-primary-inverse{
+    background: transparent;
+    color: $primary;
+
+    &:hover{
+      background: $primary;
+      color: $white;
+    }
+    &:active{
+      background: $primary-active;
+    }
+    &:disabled, &.disabled{
+      background: transparent;
+      color: $disabled;
+    }
+  }
+  //btn-secondary
+  &.-secondary {
+    background: $secondary;
+    color: $white;
+
+    &:hover{
+      background: $secondary-hover;
+    }
+    &:active{
+      background: $secondary-active;
+    }
+    &:disabled, &.disabled{
+      background: $disabled;
+    }
+  }
+  &.-secondary-inverse {
+    background: transparent;
+    color: $secondary;
+
+    &:hover{
+      background: $secondary-hover;
+      color: $white;
+    }
+    &:active{
+      background: $secondary-active;
+    }
+    &:disabled, &.disabled {
+      background: transparent;
+      color: $disabled;
+    }
+  }
+}

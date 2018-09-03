@@ -1,19 +1,12 @@
 @import "./border.scss";
 @import "./breakpoints.scss";
-@import "./color.scss";
 @import "./spacing.scss";
 @import "./../mixins/media.scss";
 
 $grid-columns: 12;
-$grid-border-color: $gray-3;
 $grid-gutter: $spacing-md-2;
 $half-gutter: $spacing-md-1;
 $half-gutter-sm: $spacing-sm;
-$grid-border: $border-inside $grid-border-color;
-$grid-border-left: $border-inside-left $grid-border-color;
-$grid-border-right: $border-inside-right $grid-border-color;
-$grid-border-top: $border-inside-top $grid-border-color;
-$grid-border-bottom: $border-inside-bottom $grid-border-color;
 $grid-container-maxWidth: $screen-lg;
 
 $grid-marginBottomSmall: $spacing-md-2;

@@ -1,0 +1,35 @@
+@import './../config.scss';
+@import './../../../src/assets/sass/variables/border.scss';
+
+$grid-border: $border-inside $grid-border-color;
+$grid-border-left: $border-inside-left $grid-border-color;
+$grid-border-right: $border-inside-right $grid-border-color;
+$grid-border-top: $border-inside-top $grid-border-color;
+$grid-border-bottom: $border-inside-bottom $grid-border-color;
+
+.hit-container {
+  //Border
+  .row.-bottom-border,
+  .col.-bottom-border {
+    box-shadow: $grid-border-bottom;
+  }
+
+  .row.-top-border,
+  .col.-top-border {
+    box-shadow: $grid-border-top;
+  }
+
+  .row.-right-border,
+  .col.-right-border {
+    box-shadow: $grid-border-right;
+  }
+
+  .row.-left-border,
+  .col.-left-border {
+    box-shadow: $grid-border-left;
+  }
+  .row.-full-border,
+  .col.-full-border {
+    box-shadow: $grid-border;
+  }
+}

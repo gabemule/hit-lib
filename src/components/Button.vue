@@ -70,69 +70,21 @@ export default {
   }
 
   //btn-primary
-  &.-primary{
-    //background: $red-rose;
-    //color: $white;
-
-    &:hover{
-      //background: $red-medium;
-    }
-    &:active{
-      //background: $red-dark;
-    }
-    &:disabled, &.disabled{
-      //background: $gray-3;
-    }
-  }
-  &.-primary-ghost{
+  &.-primary-inverse{
     background: transparent;
     box-shadow: $border-inside;
-    //box-shadow-color: $red-rose;
-    color: $red-rose;
-
     &:hover{
-      box-shadow: $border-inside $red-rose;
-      background: $red-rose;
-      color: $white;
-    }
-    &:active{
-      background: $red-medium;
+      box-shadow: $border-inside;
     }
     &:disabled, &.disabled{
-      background: transparent;
-      box-shadow: $border-inside $gray-3;
-      color: $gray-3;
+      box-shadow: $border-inside;
     }
   }
   //btn-secondary
-  &.-secondary {
-    background: $blue;
-    color: $white;
-    &:hover{
-      background: $blue-medium;
-    }
-    &:active{
-      background: $blue-dark;
-    }
-    &:disabled, &.disabled{
-      background: $gray-3;
-    }
-  }
-  &.-secondary-ghost {
-    background: transparent;
-    box-shadow: $border-inside $blue;
-    color: $blue;
-    &:hover{
-      background: $blue;
-      color: $white;
-    }
-    &:active{
-      background: $blue-medium;
-    }
+  &.-secondary-inverse {
+    box-shadow: $border-inside;
     &:disabled, &.disabled {
-      background: transparent;
-      box-shadow: $border-inside $gray-3;
-      color: $gray-3;
+      box-shadow: $border-inside;
     }
   }
 

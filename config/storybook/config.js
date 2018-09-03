@@ -2,6 +2,8 @@
 import { configure } from "@storybook/vue";
 import { setOptions } from "@storybook/addon-options";
 
+import './../../theme/default.scss';
+
 import Vue from 'vue';
 import hitLib from './../../src/bundle';
 Vue.use(hitLib);

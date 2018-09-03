@@ -13,7 +13,7 @@ const SizeButton = "Size";
 const optionsVariant = {
   Primary: "primary",
   "Primary Inverse": "primary-inverse",
-  Secondary: "Secondary",
+  Secondary: "secondary",
   "Secondary Inverse": "secondary-inverse",
   Back: "back"
 };

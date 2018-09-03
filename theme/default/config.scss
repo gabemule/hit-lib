@@ -1,0 +1,23 @@
+$primary: #4286f4;
+$primary-hover: lighten($primary, 10);
+$primary-active: darken($primary, 15);
+
+$secondary: #ed40d8;
+$secondary-hover: lighten($secondary, 10);
+$secondary-active: darken($secondary, 15);
+
+$white: #FFF;
+$disabled: gray;
+
+$black: 		#313647;
+$gray-1: 		#F2F2F2;
+$gray-2: 		#DDDDDD;
+$gray-3: 		#999999;
+$gray-4: 		#666666;
+
+$grid-border-color: $gray-3;
+
+$error: 		#E24242;
+$warning: 		#DAB400;
+$success: 		#1D9077;
+$info: 			#50C9F2;
