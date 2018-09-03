@@ -16,8 +16,8 @@
             <hit-row>
                 <hit-col>
                     <hit-button @click="success"> Success Message </hit-button>
-                    <hit-button @click="warning"> Warning Message </hit-button>
-                    <hit-button @click="error"> Error Message </hit-button>
+                    <hit-button variant="secondary" @click="warning"> Warning Message </hit-button>
+                    <hit-button variant="primary-inverse" @click="error"> Error Message </hit-button>
                 </hit-col>
             </hit-row>
 
@@ -61,13 +61,13 @@
 export default {
   methods: {
     success() {
-      this.$Alert.success("Success Message Triggered!");
+      this.$Alert.success("This is a Success Message Example!", 15000);
     },
     warning() {
-      this.$Alert.warning("Warning Message Triggered!");
+      this.$Alert.warning("A Warning Message Example!");
     },
     error() {
-      this.$Alert.error("Error Message Triggered!");
+      this.$Alert.error("Error Message Example Triggered!");
     }
   }
 };

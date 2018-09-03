@@ -19,7 +19,7 @@ $finance: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjA
   background: url($success-input);
 }
 .icon-cross-close {
-  background: url($cross-close);
+  mask-image: url($cross-close);
 }
 .icon-arrow{
   background: url($arrow);

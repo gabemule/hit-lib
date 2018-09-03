@@ -6,12 +6,15 @@ export default {
         return {
           styles: {
             primary: '#4286f4',
-            primaryHover: '#4f93ff',
-            primaryActive: '#3579e7',
+            primaryLighten: '',
+            primaryDarken: '',
 
             secondary: '#ed40d8',
-            secondaryHover: '#fa4de5',
-            secondaryActive: '#e033cb',
+            secondaryLighten: '',
+            secondaryDarken: '',
+
+            lighten: 0.15,
+            darken: -0.15,
 
             white: '#FFF',
             disabled: '#999999',
@@ -24,10 +27,10 @@ export default {
 
             gridBorder: '#999999',
 
-            error: '#E24242',
-            warning: '#DAB400',
-            success: '#1D9077',
-            info: '#50C9F2',
+            error: '#dc3545',
+            warning: '#ffc107',
+            success: '#28a745',
+            info: '#17a2b8',
           }
         }
       },

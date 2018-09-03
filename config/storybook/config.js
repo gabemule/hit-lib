@@ -6,26 +6,41 @@ import Vue from 'vue';
 import hitLib from './../../src/bundle';
 Vue.use(hitLib);
 
+// Example 1
 // Vue.use(hitLib, {
 //   styles: {
-//     primary: '#E24242',
-//     primaryHover: '#E24299',
-//     primaryActive: '#E29992',
-//     secondary: '#DAB400',
-//     secondaryHover: '#d3d23e',
-//     secondaryActive: '#98a323',
-//     white: '#FFF',
-//     disabled: '#1D9077',
-//     black: '#313647',
-//     gray1: '#F2F2F2',
-//     gray2: '#DDDDDD',
-//     gray3: '#999999',
-//     gray4: '#666666',
-//     gridBorder: '#999999',
+//     primary: '#FF4E63',
+//     secondary: '#170085',
 //     error: '#ed40d8',
 //     warning: '#ed40d8',
 //     success: '#ed40d8',
 //     info: '#ed40d8',
+//   }
+// });
+
+
+// DCM
+// Vue.use(hitLib, {
+//   styles: {
+//     primary: '#429ece',
+//     secondary: '#f6a623',
+//   }
+// });
+
+
+// Americanas
+// Vue.use(hitLib, {
+//   styles: {
+//     primary: '#e60014',
+//     secondary: '#ffc107',
+//   }
+// });
+
+// Submarino
+// Vue.use(hitLib, {
+//   styles: {
+//     primary: '#00adef',
+//     secondary: '#ffc107',
 //   }
 // });
 

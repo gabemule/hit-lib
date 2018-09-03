@@ -36,6 +36,7 @@
 
             order && '-'+order+'-position',
         ]"
+         :style="styles"
     >
         <slot/>
     </div>
@@ -83,5 +84,32 @@
 
             order:          { type: String, default: '', validator(value) { return Order.indexOf(value) !== -1 } }
         },
+        computed: {
+          styles() {
+            let style = { styled: true };
+
+            if (this.border === true) {
+              style.boxShadow = 'inset 0 0 0 1px '+ this.$Theme.styles.gridBorder;
+            }
+
+            if (this.borderTop === true) {
+              style.boxShadow = 'inset 0 1px 0 0 '+ this.$Theme.styles.gridBorder;
+            }
+
+            if (this.borderBottom === true) {
+              style.boxShadow = 'inset 0 -1px 0 0 '+ this.$Theme.styles.gridBorder;
+            }
+
+            if (this.borderLeft === true) {
+              style.boxShadow = 'inset 1px 0 0 '+ this.$Theme.styles.gridBorder;
+            }
+
+            if (this.borderRight === true) {
+              style.boxShadow = 'inset -1px 0 0 '+ this.$Theme.styles.gridBorder;
+            }
+
+            return style;
+          }
+        }
     }
 </script>

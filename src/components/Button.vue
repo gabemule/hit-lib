@@ -35,7 +35,7 @@ export default {
       default: "primary",
       validator(value) {
         return (
-          ["primary", "primary-ghost", "secondary", "secondary-ghost", "back"].indexOf(
+          ["primary", "primary-inverse", "secondary", "secondary-inverse", "back"].indexOf(
             value
           ) !== -1
         );
@@ -58,6 +58,10 @@ export default {
     },
     updateActiveState(bool) {
       this.activeState = bool;
+    },
+    lightenDarken(color, percent) {
+      var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+      return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
     }
   },
   computed: {
@@ -66,9 +70,11 @@ export default {
 
       if (this.variant === 'primary') {
         if (this.activeState === true) {
-          style.backgroundColor = this.$Theme.styles.primaryActive;
+          let active = (this.$Theme.styles.primaryDarken === '' ? this.lightenDarken(this.$Theme.styles.primary, this.$Theme.styles.darken) : this.$Theme.styles.primaryDarken);
+          style.backgroundColor = active;
         } else if (this.hoverState === true) {
-          style.backgroundColor = this.$Theme.styles.primaryHover;
+          let hover = (this.$Theme.styles.primaryLighten === '' ? this.lightenDarken(this.$Theme.styles.primary, this.$Theme.styles.lighten) : this.$Theme.styles.primaryLighten);
+          style.backgroundColor = hover;
         } else {
           style.backgroundColor = this.$Theme.styles.primary;
         }
@@ -77,9 +83,11 @@ export default {
 
       if (this.variant === 'secondary') {
         if (this.activeState === true) {
-          style.backgroundColor = this.$Theme.styles.secondaryActive;
+          let active = (this.$Theme.styles.secondaryDarken === '' ? this.lightenDarken(this.$Theme.styles.secondary, this.$Theme.styles.darken) : this.$Theme.styles.secondaryDarken);
+          style.backgroundColor = active;
         } else if (this.hoverState === true) {
-          style.backgroundColor = this.$Theme.styles.secondaryHover;
+          let hover = (this.$Theme.styles.secondaryLighten === '' ? this.lightenDarken(this.$Theme.styles.secondary, this.$Theme.styles.lighten) : this.$Theme.styles.secondaryLighten);
+          style.backgroundColor = hover;
         } else {
           style.backgroundColor = this.$Theme.styles.secondary;
         }
@@ -88,7 +96,8 @@ export default {
 
       if (this.variant === 'primary-inverse') {
         if (this.activeState === true) {
-          style.backgroundColor = this.$Theme.styles.primaryActive;
+          let active = (this.$Theme.styles.primaryDarken === '' ? this.lightenDarken(this.$Theme.styles.primary, this.$Theme.styles.darken) : this.$Theme.styles.primaryDarken);
+          style.backgroundColor = active;
           style.color = this.$Theme.styles.white;
         } else if (this.hoverState === true) {
           style.backgroundColor = this.$Theme.styles.primary;
@@ -100,7 +109,8 @@ export default {
 
       if (this.variant === 'secondary-inverse') {
         if (this.activeState === true) {
-          style.backgroundColor = this.$Theme.styles.secondaryActive;
+          let active = (this.$Theme.styles.secondaryDarken === '' ? this.lightenDarken(this.$Theme.styles.secondary, this.$Theme.styles.darken) : this.$Theme.styles.secondaryDarken);
+          style.backgroundColor = active;
           style.color = this.$Theme.styles.white;
         } else if (this.hoverState === true) {
           style.backgroundColor = this.$Theme.styles.secondary;
